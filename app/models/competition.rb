@@ -22,4 +22,16 @@ class Competition < ApplicationRecord
   def finish
     update finished: true
   end
+
+  def ranking
+    results
+      .select("*", "#{criterion_for_best_result}(value) as value")
+      .group(:athlete_id)
+      .order(value: order_for_results)
+  end
+
+  private
+  def order_for_results
+    criterion_for_best_result == "max" ? "desc" : "asc"
+  end
 end

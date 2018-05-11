@@ -2,7 +2,8 @@ json.id result.id
 
 if include_competition
   json.competition do
-    json.partial! "competitions/competition", competition: result.competition
+    json.partial! "competitions/competition", competition: result.competition,
+      include_ranking: false
   end
 end
 
