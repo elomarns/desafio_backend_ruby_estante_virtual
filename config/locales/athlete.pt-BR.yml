@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      athlete:
+        one: "Atleta"
+        other: "Atletas"
+    attributes:
+      athlete:
+        name: "Nome"
