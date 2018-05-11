@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      competition:
+        one: "Competição"
+        other: "Competições"
+    attributes:
+      competition:
+        name: "Nome"
+        unit: "Unidade"
+        finished: "Finalizada"
+        results_limit_per_athlete: "Limite de resultados por atleta"
+        criterion_for_best_result: "Critério para obter o melhor resultado"
