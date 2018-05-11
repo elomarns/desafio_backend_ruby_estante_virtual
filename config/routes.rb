@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  scope(path_names: { finish: :finalizar }) do
+    resources :competitions, except: [:new, :edit], path: :competicoes, defaults: { format: :json } do
+      member do
+        patch :finish, as: :finish
+        put :finish, as: nil
+      end
+    end
+  end
 end
