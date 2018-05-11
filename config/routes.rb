@@ -7,4 +7,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :results, only: [:show, :create], path: :resultados, defaults: { format: :json }
 end
