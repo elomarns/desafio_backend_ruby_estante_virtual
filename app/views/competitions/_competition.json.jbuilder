@@ -8,4 +8,11 @@ if include_ranking
   end
 end
 
+if competition.finished?
+  json.winner_result do
+    json.partial! 'results/result', result: competition.winner_result,
+      include_competition: false, include_athlete: true
+  end
+end
+
 json.url competition_url(competition, format: :json)

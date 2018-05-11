@@ -30,6 +30,12 @@ class Competition < ApplicationRecord
       .order(value: order_for_results)
   end
 
+  def winner_result
+    if finished?
+      ranking.first
+    end
+  end
+
   private
   def order_for_results
     criterion_for_best_result == "max" ? "desc" : "asc"
