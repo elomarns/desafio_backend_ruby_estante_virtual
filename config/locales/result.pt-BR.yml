@@ -1,0 +1,19 @@
+pt-BR:
+  activerecord:
+    models:
+      result:
+        one: "Resultado"
+        other: "Resultados"
+    attributes:
+      result:
+        competition: "Competição"
+        athlete: "Atleta"
+        finished: "Valor"
+    errors:
+      models:
+        result:
+          attributes:
+            competition:
+              finished: "não é possível adicionar resultados para uma competição já finalizada"
+            athlete:
+              reached_limit_on_competition: "este atleta já atingiu o limite de resultados nessa competição"
