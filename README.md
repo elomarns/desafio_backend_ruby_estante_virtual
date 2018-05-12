@@ -461,3 +461,12 @@ Retorno:
     "updated_at": "2018-05-11T19:38:51.743-03:00"
 }
 ```
+
+## Possibilidades de melhoria
+
+Buscando manter a aplicação mais simples, e dentro do prazo, eu evitei fazer certas coisas que, embora não foram solicitadas, poderiam melhorar a aplicação. Abaixo eu listo algumas delas:
+
+* Colocar a API num namespace, e versioná-la, de forma que suas URLs sejam precedidas por /api/v1/
+* Aumentar a cobertura de testes
+* Permitir que os usuários da API passem parêmetros adicionais, como limite, ordenação dos resultados, e até filtros
+* Não carregar os módulos do Rails que não estão sendo utilizados: ActiveJob, ActiveStorage, ActionMailer e ActionCable.
